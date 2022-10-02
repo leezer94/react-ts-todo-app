@@ -1,4 +1,5 @@
 import { createRoot } from 'react-dom/client';
+import { RecoilRoot } from 'recoil';
 
 import App from './App';
 import GlobalStyle from './styles/GlobalStyles';
@@ -9,6 +10,8 @@ const root = createRoot(container as Element);
 root.render(
   <>
     <GlobalStyle />
-    <App />
+    <RecoilRoot>
+      <App />
+    </RecoilRoot>
   </>,
 );
