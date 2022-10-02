@@ -12,10 +12,14 @@
     "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
   },
   "dependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/json-server": "^0.14.4",
     "@types/styled-components": "^5.1.26",
     "axios": "^0.27.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^4.4.0",
+    "recoil": "^0.7.5",
     "styled-components": "^5.3.6",
     "styled-reset": "^4.4.2"
   },
