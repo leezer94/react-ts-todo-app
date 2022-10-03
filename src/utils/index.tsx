@@ -1,4 +1,6 @@
-import { CATEGORIES } from '../constants';
+import Inko from 'inko';
+import { useRecoilValue } from 'recoil';
+import { CategoryStateTypes, categoriesState } from '../states/index';
 
 export const UUID = (): string => {
   let result = '';
@@ -19,9 +21,19 @@ export type CategoryTypes = {
 };
 
 export const getCurrentPath = (currentCategory: string) => {
-  const current = CATEGORIES.find(
+  const categories = useRecoilValue<CategoryStateTypes[]>(categoriesState);
+
+  const current = categories.find(
     (category: CategoryTypes) => category.name === currentCategory,
   );
 
   return current?.path;
+};
+
+export const convertKoToEn = (input: string) => {
+  const inko = new Inko();
+
+  const ko2en = inko.ko2en(input);
+
+  return '/' + ko2en;
 };

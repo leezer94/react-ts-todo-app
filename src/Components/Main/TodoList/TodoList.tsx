@@ -15,23 +15,25 @@ const TodoList = () => {
   const currentCategory = useRecoilValue<string>(categoryState);
   const [currentList, setCurrentList] =
     useRecoilState<CurrentListTypes[]>(currentListState);
+
   const current = getCurrentPath(currentCategory);
 
   useEffect(() => {
-    axios
-      .get(ENDPOINT + current)
-      .then((res) => {
-        const list: CurrentListTypes[] = res.data;
-
-        setCurrentList(list);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    if (current) {
+      axios
+        .get(ENDPOINT + current)
+        .then((res) => {
+          const list: CurrentListTypes[] = res.data;
+          setCurrentList(list);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }
   }, [current, setCurrentList]);
 
   return (
-    <S.Ul data-category-name={currentCategory} id='menu-list'>
+    <S.Ul data-category-name={currentCategory}>
       {currentList.map(({ id, title }) => {
         return <List key={UUID()} id={id} title={title} path={current} />;
       })}

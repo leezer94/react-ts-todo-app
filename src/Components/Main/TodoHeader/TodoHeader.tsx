@@ -6,11 +6,9 @@ const TodoHeader = () => {
   const currentCategory = useRecoilValue<string>(categoryState);
 
   return (
-    <S.Header className='heading d-flex justify-between'>
-      <S.Title id='category-title' className='mt-1'>
-        {currentCategory} 리스트
-      </S.Title>
-      <S.Span className='mr-2 mt-4 menu-count'>총 0 개</S.Span>
+    <S.Header>
+      <S.Title>{currentCategory} 리스트</S.Title>
+      <S.Span>총 0 개</S.Span>
     </S.Header>
   );
 };

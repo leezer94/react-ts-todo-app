@@ -5,8 +5,8 @@ import TodoList from './TodoList/TodoList';
 
 const Main = () => {
   return (
-    <S.Main className='main-container mt-10 d-flex justify-center'>
-      <S.Wrapper className='wrapper bg-white p-10'>
+    <S.Main>
+      <S.Wrapper>
         <TodoHeader />
         <TodoForm />
         <TodoList />

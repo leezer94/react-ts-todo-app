@@ -9,7 +9,8 @@ const GlobalStyle = createGlobalStyle`
       font-size: 1rem;
       font-weight: normal;
       line-height: 1.5;
-      background-color: #f1f5f9;
+      background-color: #f1f5f9;    
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
     }
 
     .App {

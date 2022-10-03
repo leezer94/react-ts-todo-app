@@ -6,6 +6,12 @@ export type CurrentListTypes = {
   completed: boolean;
 };
 
+export type CategoryStateTypes = {
+  id: number;
+  name: string;
+  path: string;
+};
+
 export const categoryState = atom<string>({
   key: 'category',
   default: '청소',
@@ -13,5 +19,10 @@ export const categoryState = atom<string>({
 
 export const currentListState = atom<CurrentListTypes[]>({
   key: 'currentList',
+  default: [],
+});
+
+export const categoriesState = atom<CategoryStateTypes[]>({
+  key: 'categories',
   default: [],
 });

@@ -87,25 +87,13 @@ const List = ({ id, title, path }: Props) => {
       <S.Span className={currentTodo.completed ? 'sold-out' : undefined}>
         {title}
       </S.Span>
-      <S.TaskButton
-        type='button'
-        className='bg-gray-50 text-gray-500 text-sm mr-1 menu-sold-out-button'
-        onClick={handleComplete}
-      >
+      <S.TaskButton type='button' onClick={handleComplete}>
         완료
       </S.TaskButton>
-      <S.TaskButton
-        type='button'
-        className='bg-gray-50 text-gray-500 text-sm mr-1 menu-edit-button'
-        onClick={handleModify}
-      >
+      <S.TaskButton type='button' onClick={handleModify}>
         수정
       </S.TaskButton>
-      <S.DeleteButton
-        type='button'
-        className='bg-gray-50 text-gray-500 text-sm  menu-remove-button'
-        onClick={handleDelete}
-      >
+      <S.DeleteButton type='button' onClick={handleDelete}>
         삭제
       </S.DeleteButton>
     </S.List>
