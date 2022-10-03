@@ -1,22 +1,7 @@
 {
   "categories": [
     {
-      "id": 1,
-      "name": "청소",
-      "path": "/housework"
-    },
-    {
-      "id": 2,
-      "name": "숙제",
-      "path": "/assignment"
-    },
-    {
-      "id": 3,
-      "name": "식단",
-      "path": "/diet"
-    },
-    {
-      "id": 4,
+      "category_id": 4,
       "name": "운동",
       "path": "/workout"
     },
@@ -24,59 +9,16 @@
       "id": 5,
       "name": "쇼핑",
       "path": "/shopping"
-    }
-  ],
-  "housework": [
-    {
-      "id": 1,
-      "title": "sadasdas",
-      "completed": false
-    },
-    {
-      "id": 2,
-      "title": "123",
-      "completed": false
     },
     {
       "id": 3,
-      "title": "asd",
-      "completed": false
-    },
-    {
-      "id": 4,
-      "title": "123213123",
-      "completed": false
-    },
-    {
-      "id": 5,
-      "title": "ccc",
-      "completed": false
+      "name": "장보기",
+      "path": "/wkdqhrl"
     }
   ],
-  "assignment": [],
-  "diet": [],
-  "workout": [
-    {
-      "id": 1,
-      "title": "dasdas",
-      "completed": false
-    }
-  ],
-  "shopping": [
-    {
-      "id": 1,
-      "title": "마트 쇼핑",
-      "completed": false
-    },
-    {
-      "id": 2,
-      "title": "양말 사기",
-      "completed": false
-    },
-    {
-      "id": 3,
-      "title": "asdasd",
-      "completed": false
-    }
+  "todolist": [
+    { "category": "housework", "todolist_id": 1, "name": 22, "completed": 22 },
+    { "category": "housework", "id": 2, "name": 22, "completed": 22 },
+    { "category": "housework", "id": 3, "name": 22, "completed": 22 }
   ]
 }
