@@ -1,20 +1,21 @@
 import { atom } from 'recoil';
 
 export type CurrentListTypes = {
-  id: number;
+  category: string;
+  id: string;
   title: string;
   completed: boolean;
 };
 
 export type CategoryStateTypes = {
-  id: number;
+  id: string;
   name: string;
   path: string;
 };
 
 export const categoryState = atom<string>({
   key: 'category',
-  default: '청소',
+  default: '',
 });
 
 export const currentListState = atom<CurrentListTypes[]>({

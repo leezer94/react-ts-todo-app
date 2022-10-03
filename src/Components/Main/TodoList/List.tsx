@@ -6,15 +6,18 @@ import { ENDPOINT } from '../../../constants/index';
 
 import * as S from './TodoList.style';
 
-type Props = { id: number; title: string; path?: string };
+type Props = {
+  id: string;
+  title: string;
+};
 
-const List = ({ id, title, path }: Props) => {
+const List = ({ id, title }: Props) => {
   const [currentList, setCurrentList] =
     useRecoilState<CurrentListTypes[]>(currentListState);
   const index = currentList.findIndex((list) => list.id === id);
   const currentTodo = currentList[index];
   const handleDelete = () => {
-    axios.delete(ENDPOINT + path + `/${id}`).then(() => {
+    axios.delete(`${ENDPOINT}/todolist/${id}`).then(() => {
       const deleted = [
         ...currentList.slice(0, index),
         ...currentList.slice(index + 1),
@@ -33,19 +36,13 @@ const List = ({ id, title, path }: Props) => {
       return;
     }
 
-    axios.patch(ENDPOINT + path + `/${id}`, { title: newTodo }).then(() => {
+    axios.patch(`${ENDPOINT}/todolist/${id}`, { title: newTodo }).then(() => {
       const modifiedTodo = {
         ...currentTodo,
         title: newTodo,
       };
 
-      type ModifiedType = {
-        id: number;
-        title: string;
-        completed: boolean;
-      };
-
-      const modified: ModifiedType[] = [
+      const modified: CurrentListTypes[] = [
         ...currentList.slice(0, index),
         modifiedTodo,
         ...currentList.slice(index + 1),
@@ -59,7 +56,9 @@ const List = ({ id, title, path }: Props) => {
     const { completed } = currentTodo;
 
     axios
-      .patch(ENDPOINT + path + `/${id}`, { completed: !completed })
+      .patch(`${ENDPOINT}/todolist/${id}`, {
+        completed: !completed,
+      })
       .then(() => {
         const modifiedTodo = {
           ...currentTodo,

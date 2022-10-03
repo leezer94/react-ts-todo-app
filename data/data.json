@@ -1,24 +1,35 @@
 {
   "categories": [
     {
-      "category_id": 4,
-      "name": "운동",
-      "path": "/workout"
+      "id": "tdTycHGHle3b",
+      "name": "123",
+      "path": "/123"
     },
     {
-      "id": 5,
-      "name": "쇼핑",
-      "path": "/shopping"
-    },
-    {
-      "id": 3,
-      "name": "장보기",
-      "path": "/wkdqhrl"
+      "id": "U9ifEnJr8RRB",
+      "name": "2345",
+      "path": "/2345"
     }
   ],
   "todolist": [
-    { "category": "housework", "todolist_id": 1, "name": 22, "completed": 22 },
-    { "category": "housework", "id": 2, "name": 22, "completed": 22 },
-    { "category": "housework", "id": 3, "name": 22, "completed": 22 }
-  ]
+    {
+      "category": "234",
+      "id": "sdsa",
+      "title": "고리",
+      "completed": false
+    },
+    {
+      "category": "2345",
+      "id": "fbuRKjayu87m",
+      "title": "123",
+      "completed": false
+    },
+    {
+      "category": "123",
+      "id": "CupvjrDC1qCt",
+      "title": "234",
+      "completed": false
+    }
+  ],
+  "bin": []
 }

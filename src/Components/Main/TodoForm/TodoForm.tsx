@@ -8,7 +8,7 @@ import {
 } from '../../../states/index';
 
 import { ENDPOINT } from '../../../constants/index';
-import { getCurrentPath } from '../../../utils/index';
+import { getCurrentPath, UUID } from '../../../utils/index';
 
 import * as S from './TodoForm.style';
 
@@ -17,22 +17,30 @@ export const TodoForm = () => {
   const [currentList, setCurrentList] =
     useRecoilState<CurrentListTypes[]>(currentListState);
   const [title, setTitle] = useState<string>('');
-  const current = getCurrentPath(currentCategory);
+  const path = getCurrentPath(currentCategory);
   const titleRef = useRef<HTMLInputElement>(null);
 
   const postNewTodo = useCallback(() => {
-    const newTodo: { id: number; title: string; completed: boolean } = {
-      id: currentList.length + 1,
-      title,
-      completed: false,
-    };
+    if (path) {
+      const newTodo: {
+        category: string;
+        id: string;
+        title: string;
+        completed: boolean;
+      } = {
+        category: currentCategory,
+        id: UUID(),
+        title,
+        completed: false,
+      };
 
-    axios
-      .post(ENDPOINT + current, newTodo)
-      .then(() => setCurrentList([...currentList, newTodo]));
+      axios
+        .post(`${ENDPOINT}/todolist`, newTodo)
+        .then(() => setCurrentList([...currentList, newTodo]));
 
-    if (titleRef.current) titleRef.current.value = '';
-  }, [current, currentList, setCurrentList, title]);
+      if (titleRef.current) titleRef.current.value = '';
+    }
+  }, [path, currentList, setCurrentList, title]);
 
   const handleKeypressEvent = (e: React.FormEvent<HTMLElement>) => {
     e.preventDefault();

@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 
-export const Button = styled.button`
+const Button = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: rgb(255, 255, 255);
   margin-left: 0.25rem;
   margin-right: 0.25rem;
@@ -17,3 +20,24 @@ export const Button = styled.button`
   border-style: none;
   cursor: pointer;
 `;
+
+const Close = styled.span`
+  visibility: hidden;
+  position: relative;
+  left: 35px;
+  bottom: 14px;
+  width: 10px;
+  height: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  z-index: 10;
+  margin-left: -10px;
+
+  ${Button}:hover & {
+    visibility: visible;
+    cursor: pointer;
+  }
+`;
+
+export { Button, Close };

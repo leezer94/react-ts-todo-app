@@ -25,7 +25,7 @@ const Header = () => {
 
     if (currentInput) {
       const newCategory = {
-        id: categories.length + 1,
+        id: UUID(),
         name: currentInput.value,
         path: convertKoToEn(currentInput.value),
       };
@@ -71,13 +71,13 @@ const Header = () => {
         />
       </S.InputContainer>
       <S.Nav>
-        {categories.map(({ name }) => {
+        {categories.map((category) => {
           return (
             <CategoryTab
               type='button'
               key={UUID()}
-              title={name}
-              onClick={() => setCurrentCategory(name)}
+              category={category}
+              onClick={() => setCurrentCategory(category.name)}
             />
           );
         })}
