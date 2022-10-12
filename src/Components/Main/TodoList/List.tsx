@@ -17,14 +17,21 @@ const List = ({ id, title }: Props) => {
   const index = currentList.findIndex((list) => list.id === id);
   const currentTodo = currentList[index];
   const handleDelete = () => {
-    axios.delete(`${ENDPOINT}/todolist/${id}`).then(() => {
-      const deleted = [
-        ...currentList.slice(0, index),
-        ...currentList.slice(index + 1),
-      ];
+    axios
+      .delete(`${ENDPOINT}/todolist/${id}`)
+      .then((res) => {
+        console.log('res', res);
 
-      setCurrentList(deleted);
-    });
+        const deleted = [
+          ...currentList.slice(0, index),
+          ...currentList.slice(index + 1),
+        ];
+
+        setCurrentList(deleted);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   const handleModify = () => {

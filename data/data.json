@@ -1,35 +1,5 @@
 {
-  "categories": [
-    {
-      "id": "tdTycHGHle3b",
-      "name": "123",
-      "path": "/123"
-    },
-    {
-      "id": "U9ifEnJr8RRB",
-      "name": "2345",
-      "path": "/2345"
-    }
-  ],
-  "todolist": [
-    {
-      "category": "234",
-      "id": "sdsa",
-      "title": "고리",
-      "completed": false
-    },
-    {
-      "category": "2345",
-      "id": "fbuRKjayu87m",
-      "title": "123",
-      "completed": false
-    },
-    {
-      "category": "123",
-      "id": "CupvjrDC1qCt",
-      "title": "234",
-      "completed": false
-    }
-  ],
+  "categories": [],
+  "todolist": [],
   "bin": []
 }
