@@ -17,7 +17,6 @@ const TodoList = () => {
     useRecoilState<CurrentListTypes[]>(currentListState);
 
   const path = getCurrentPath(currentCategory);
-
   useEffect(() => {
     if (path) {
       axios
