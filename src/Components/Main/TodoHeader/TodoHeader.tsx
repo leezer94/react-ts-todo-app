@@ -12,7 +12,7 @@ const TodoHeader = () => {
 
   return (
     <S.Header>
-      <S.Title>{currentCategory} 리스트</S.Title>
+      <S.Title>{currentCategory ? currentCategory : '예시'} 리스트</S.Title>
       <S.Span>총 {currentList.length} 개</S.Span>
     </S.Header>
   );

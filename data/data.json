@@ -1,16 +1,47 @@
 {
   "categories": [
     {
-      "id": "2OEQRHlyj9Y7",
-      "name": "집안일",
-      "path": "/wlqdksdlf"
-    },
-    {
-      "id": "SeVSLJYOfsDV",
+      "id": "ll5kayC2Ivyl",
       "name": "숙제",
       "path": "/tnrwp"
+    },
+    {
+      "id": "GQOuYD1FpE4X",
+      "name": "장보기",
+      "path": "/wkdqhrl"
     }
   ],
-  "todolist": [],
+  "todolist": [
+    {
+      "category": "숙제",
+      "id": "Ywhe8lDmiSLx",
+      "title": "구몬 3일차",
+      "completed": true
+    },
+    {
+      "category": "숙제",
+      "id": "vske3auJp6n6",
+      "title": "눈높이 일본어 공부",
+      "completed": false
+    },
+    {
+      "category": "장보기",
+      "id": "P9lnkijpGiTe",
+      "title": "마늘 1kg",
+      "completed": false
+    },
+    {
+      "category": "장보기",
+      "id": "7kRLpZIqFYoR",
+      "title": "부추 3kg",
+      "completed": true
+    },
+    {
+      "category": "장보기",
+      "id": "whYw56inokuH",
+      "title": "부침 가루 10kg",
+      "completed": false
+    }
+  ],
   "bin": []
 }

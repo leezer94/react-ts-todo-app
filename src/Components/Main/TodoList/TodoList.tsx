@@ -8,7 +8,7 @@ import {
   CurrentListTypes,
 } from '../../../states/index';
 import { useEffect } from 'react';
-import { ENDPOINT } from '../../../constants/index';
+import { ENDPOINT, MOCK_DATA } from '../../../constants/index';
 import List from './List';
 
 const TodoList = () => {
@@ -32,6 +32,8 @@ const TodoList = () => {
         .catch((err) => {
           console.log(err);
         });
+    } else {
+      setCurrentList(MOCK_DATA);
     }
   }, [path, setCurrentList]);
 

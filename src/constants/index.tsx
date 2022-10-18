@@ -1,26 +1,29 @@
-import { UUID } from '../utils/index';
-export type DefaultType = {
-  readonly CATEGORY: { id: string; name: string; path: string };
-  readonly LIST: {
-    category: string;
-    id: string;
-    title: string;
-    completed: boolean;
-  };
+export type MockType = {
+  category: string;
+  id: string;
+  title: string;
+  completed: boolean;
 };
 
 export const ENDPOINT = 'http://localhost:4000' as const;
 
-export const DEFUALT: DefaultType = {
-  CATEGORY: {
-    id: UUID(),
-    name: '집안일',
-    path: '/wlqdksdlf',
+export const MOCK_DATA: MockType[] = [
+  {
+    category: '',
+    completed: true,
+    id: 'sjdjskj1',
+    title: '예시 1 번 완료',
   },
-  LIST: {
-    category: '집안일',
-    id: UUID(),
-    title: '방청소 하기',
+  {
+    category: '',
     completed: false,
+    id: 'sjdjskj2',
+    title: '예시 2 번 미완료',
   },
-} as const;
+  {
+    category: '',
+    completed: false,
+    id: 'sjdjskj3',
+    title: '예시 3 번',
+  },
+];
