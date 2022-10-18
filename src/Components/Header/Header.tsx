@@ -54,9 +54,7 @@ const Header = () => {
 
   return (
     <S.Header>
-      <S.HomeLink href='/'>
-        <S.Title>📋 TODO LIST APP</S.Title>
-      </S.HomeLink>
+      <S.Title>📋 TODO LIST APP</S.Title>
       <S.InputContainer>
         <S.Input
           ref={categoryInputRef}
