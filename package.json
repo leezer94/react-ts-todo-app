@@ -11,7 +11,9 @@
     "lint:fix": "eslint --fix 'src/**/*.{js,jsx,ts,tsx,json}'",
     "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
     "server": "npx json-server --watch data/data.json --port 4000",
-    "devStart": "nodemon server.js"
+    "devStart": "nodemon server.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
@@ -26,6 +28,7 @@
     "bats": "^1.8.0",
     "express": "^4.18.1",
     "express-graphql": "^0.12.0",
+    "gh-pages": "^4.0.0",
     "graphql": "^16.6.0",
     "inko": "^1.1.1",
     "nodemon": "^2.0.20",
@@ -70,5 +73,6 @@
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.10.1",
     "webpack-merge": "^5.8.0"
-  }
+  },
+  "homepage": "https://leezer94.github.io/todoapp/"
 }
